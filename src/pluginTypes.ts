@@ -60,6 +60,9 @@ export type PatientDetailsTabDemographyGeneralInfoComponentType = React.FC<{
   patientData: PatientRead;
 }>;
 
+// Global overlays rendered at the app root (e.g., floating side panels, modals)
+export type GlobalOverlaysComponentType = React.FC;
+
 // Define supported plugin components
 export type SupportedPluginComponents = {
   DoctorConnectButtons: DoctorConnectButtonComponentType;
@@ -71,6 +74,7 @@ export type SupportedPluginComponents = {
   FacilityHomeActions: FacilityHomeActionsComponentType;
   PatientRegistrationForm: PatientRegistrationFormComponentType;
   PatientDetailsTabDemographyGeneralInfo: PatientDetailsTabDemographyGeneralInfoComponentType;
+  GlobalOverlays: GlobalOverlaysComponentType;
 };
 
 // Create a type for lazy-loaded components

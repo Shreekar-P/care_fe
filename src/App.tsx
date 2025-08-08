@@ -9,6 +9,7 @@ import Loading from "@/components/Common/Loading";
 
 import Integrations from "@/Integrations";
 import PluginEngine from "@/PluginEngine";
+import { PLUGIN_Component } from "@/PluginEngine";
 import AuthUserProvider from "@/Providers/AuthUserProvider";
 import HistoryAPIProvider from "@/Providers/HistoryAPIProvider";
 import Routers from "@/Routers";
@@ -54,6 +55,8 @@ const App = () => {
                 // Refer: https://github.com/shadcn-ui/ui/issues/2234.
                 toastOptions={{ closeButton: true }}
               />
+              {/* Global plugin overlays (e.g., floating side panels) */}
+              <PLUGIN_Component __name="GlobalOverlays" />
             </PluginEngine>
           </PubSubProvider>
         </Suspense>
